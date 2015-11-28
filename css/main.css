@@ -1,0 +1,179 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	width:100%;
+	
+}
+
+
+@font-face {
+   font-family: myFont;
+   src: url(../fonts/MYRIADPRO-COND.OTF);
+}
+#wrapper{
+	box-sizing: border-box;
+	font-size: 14px;
+	font-family:myFont;
+	font-stretch: expanded;
+	letter-spacing: 3px;
+}
+
+header{
+	position:relative;
+}
+.blueberry { margin: 0 auto; }
+.blueberry .slides {
+	display: block;
+	position: relative;
+	overflow: hidden;
+
+}
+.blueberry .slides li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.blueberry .slides li img {
+	display: block;
+	width: 100%;
+	max-width: none;
+}
+.blueberry .slides li.active { display: block; position: relative; }
+.blueberry .crop li img { width: auto; }
+
+.blueberry .pager {
+	height: 40px;
+	text-align: center;
+}
+.blueberry .pager li { display: inline-block; }
+.blueberry .pager li a,
+.blueberry .pager li a span {
+	display: block;
+	height: 4px;
+	width: 4px;
+}
+.blueberry .pager li a {
+	padding: 18px 8px;
+-webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.blueberry .pager li a span {
+	overflow: hidden;
+	background: #c0c0c0;
+	text-indent: -9999px;
+-webkit-border-radius: 2px;
+   -moz-border-radius: 2px;
+	border-radius: 2px;
+}
+.blueberry .pager li.active a span { background: #404040; }
+
+#topElements{
+	float:left;
+	position:absolute;
+	top:0;
+	left:0;
+	
+	
+	
+}
+#relCont{
+	position:relative;
+	z-index: 3;
+	min-height:60px;
+}
+#container{
+	position:relative;
+	z-index:4;
+	
+}
+#logo{
+	width:10%;
+	float:left;
+	padding-left:15%;
+
+}
+#logo img{
+	width:100%;
+
+}
+.top_menu{
+	width:50%;
+	float:left;
+	padding: 1% 0;
+
+
+}
+
+.menu{
+    margin-left: 4%;
+	float: left;
+
+	
+}
+.menu li{
+	width:18%;
+    font-size: 1rem;
+    float: left;
+    padding: 1% 1%;
+	list-style:none;
+	text-align:right;
+
+	
+}
+
+.menuLink{
+    font-family:Arial;
+    text-decoration: none;
+    color: #ffffff;
+	text-transform: uppercase;
+
+	
+}
+
+.menuImg{
+	width:10%;
+	float:left;
+	margin-left: 5%;
+	margin-top: 1%;
+
+}
+
+.grouped_elements{
+	width: 30%;
+	float:left;
+	padding-left: 3%;
+
+}
+.grouped_elements img{
+	width:40%;
+
+}
+
+#overlayMask{
+	position: absolute;
+	 background-color: #a086ab;
+	 width:100%;
+	 min-height:60px;
+	 z-index: 1;
+	 opacity: 0.4;
+	 top:0;
+	 left:0;
+	
+}
