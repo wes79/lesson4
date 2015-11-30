@@ -4,23 +4,24 @@
 <meta charset="UTF-8">
 <title>lesson4</title>
 
-<link  href='css/main.css'  rel="stylesheet" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script src="js/jquery.blueberry.js"></script>
+<link  type="text/css"href='css/main.css'  rel="stylesheet" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<script src="js/responsiveslides.js"></script>
+
 <script>
-$(window).load(function() {
-	$('.blueberry').blueberry();
-});
+  $(function() {
+    $(".rslides").responsiveSlides();
+  });
 </script>
-
-
 </head>
 <body>
 	<div id="wrapper">
 		<header class="header" role="banner">
 		
-			<div class="blueberry">
-			  <ul class="slides">
+			<div class="slick-slider">
+			  <ul class="rslides">
 				<li><img src="img/slider.png" /></li>
 				<li><img src="img/slider2.jpg" /></li>
 				<li><img src="img/slider3.jpg" /></li>
