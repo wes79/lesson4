@@ -23,7 +23,7 @@ time, mark, audio, video {
 
 @font-face {
    font-family: myFont;
-   src: url(../fonts/MYRIADPRO-COND.OTF);
+   src: url(../fonts/MYRIADPRO-REGULAR.OTF);
 }
 #wrapper{
 	box-sizing: border-box;
@@ -137,7 +137,7 @@ header{
 }
 
 .menuLink{
-    font-family:Arial;
+    font-family:myFont Arial;
     text-decoration: none;
     color: #ffffff;
 	text-transform: uppercase;
@@ -266,6 +266,7 @@ header{
 	color: #7e63a7;
 	margin-top: 5%;
 	margin-bottom:3%;
+	font-family: myFont;
 }
 .descr{
 	width:30%;
@@ -281,10 +282,12 @@ header{
 	padding-top:2%;
 	padding-bottom:2%;
 	border-bottom: 2px #91c5a9 solid;
+	font-family: myFont;
 }
 .descr p{
 	font-size: 1rem;
 	padding-bottom:2%;
+	font-family: myFont;
 }
 
 .btn{
@@ -378,6 +381,7 @@ header{
 	padding-right:3%;
 }
 .textArea button{
+	font-family: myFont;
 	color: #ffffff;
 	background-color:#775ba3;
 	border: 2px #ffffff solid;
@@ -474,12 +478,14 @@ header{
 	font-size: 1.2rem;
 	text-align: left;
 	padding: 1%;
+	font-family: myFont;
 }
 
 #clooney{
 	padding:2%;
 	border-radius:50%;
 	border: 2px #91c5a9 solid;
+	font-family: myFont;
 }
 #signature{
 	color: #7e63a8;
@@ -487,6 +493,7 @@ header{
 	text-align: right;
 	padding-top: 3%;
 	font-size: 1rem;
+	font-family: myFont;
 }
 .comentText .quotes{
 	color: #91c5a9;
@@ -526,15 +533,16 @@ header{
 	display: block;
 	text-decoration: none;
 	text-transform: uppercase;
+	font-family: myFont;
     color: #7e63a8;
 }
 .galeryMenu:hover{
 	border-bottom: 2px #91c5a9 solid;
 }
 .pictures{
-	width: 80%;
+	width: 100%;
 	float:left;
-	margin: 5% 10%;
+	margin: 5% 0%;
 }
 .galeriPic{
 	width: 25%;
@@ -552,4 +560,104 @@ header{
 	opacity: 0.6;
 	z-index:3;
 }
+#footer{
+	clear: both;
+}
+.topFooter{
+	float: left;
+	background-color: #91c5a9;
+	
+}
+.topFooterInfo{
+	width:80%;
+	margin: 0 10%;
+	float: left;
+}
+.topFooterContent{
+	width:23%;
+	float: left;
+	padding: 5% 1%;
+}
+.topFooterContent h4{
+	font-size: 1.8rem;
+	font-family: myFont;
+	color: #ffffff;
+	text-align: center;
+	padding: 5% 0;
+}
+.topFooterContent p{
+	font-size: 1rem;
+	font-family: myFont;
+	color: #ffffff;
+}
+#centerText{
+	text-align: center;
+}
+.topFooterContent button{
+	padding: 3%;
+	font-size: 0.8rem;
+	font-family: myFont;
+	background-color: #419568;
+	color: #ffffff;
+	border: none;
+	margin: 2% 1%;
+	cursor: pointer;
+	
+}
+.topFooterContent button:hover{
+	background-color: #31e484;
+}
+.topFooterContent label{
+	width: 29%;
+	min-width: 62px;
+	margin-right:2%;
+	float: left;	
+}
+.topFooterContent input,
+.topFooterContent textarea{
+	width: 60%;
+	float: left;
+	border: 2px #419568 solid;
+}
+.topFooterContent input,
+.topFooterContent textarea,
+.topFooterContent label{
+	margin-bottom: 3%;
+	padding: 2% 1%;
+}
 
+.subFooter{
+	float: left;
+	background-color: #54865d;
+}
+.subFooterContent{
+	width: 80%;
+	margin: 2% 10%;
+	float: left;
+}
+
+.subFooterContent p{
+	float: left;
+	width: 50%;
+	color: #ffffff;
+}
+.subFooterContent ul{
+	width: 50%;
+	float: left;
+}
+.subFooterContent ul li{
+	float: left;
+	width: 20%;
+	list-style: none;
+	color: # ffffff;
+	text-transform: uppercase;
+}
+.bottom{
+	font-size: 0.8rem;
+	text-align: center;
+
+}
+.bottom:hover{
+	border: none;
+	color: #47c25d;
+}
