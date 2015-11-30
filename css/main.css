@@ -554,8 +554,13 @@ header{
 	margin: 0 10%;
 	float: left;
 }
+
+.halfMedia{
+	float: left;
+	width: 50%;
+}
 .topFooterContent{
-	width:23%;
+	width:48%;
 	float: left;
 	padding: 5% 1%;
 }
@@ -642,3 +647,131 @@ header{
 	border: none;
 	color: #47c25d;
 }
+
+
+@media only screen  and (max-width : 1060px) {
+	
+	
+	#logo{
+		padding-left: 5%;
+		padding-top: 1%;
+	}
+	.menu li{
+		font-size: 1.4vw;
+	}
+	.top_menu{
+		width: 65%;
+	}
+	.textArea h4{
+		font-size: 2.5vw;
+		
+	}
+	.textArea p{
+		font-size: 1.3vw;
+	
+	}
+	.bottom{
+		font-size: 1vw;
+	}
+	.subFooterContent ul{
+		margin-top: 1%;
+	}
+	
+	.topFooterContent{
+		width: 48%;
+	}
+	.halfMedia{
+		width:100%;
+	}
+	.titleBold h2{
+		font-size: 3vw;
+	}
+}
+
+@media only screen  and (max-width : 640px) {
+	
+	.slick-slider{
+		display: none;
+	}
+	
+	#topElements{
+		position: inherit;
+		background-color: rgba(160, 134, 173, 0.6);
+	}
+	#overlayMask{
+		display: none;
+	}
+	#logo{
+		padding: 0;
+		width: 100%;
+	}
+	#logo img{
+		width: 30%;
+		margin: 0 35%;
+	}
+	.top_menu{
+		
+		width: 100%;
+		
+	}
+	.menuLink{
+		font-size: 4vw;
+	}
+	.menuLink:hover{
+		border: none;
+		color: #e8d2bb;
+	}
+	.menu {
+		margin: 0;
+	}
+	.menu li{
+		width: 100%;
+		
+	}
+	.menuImg{
+		width: 80%;
+		margin: 2% 10%;
+	}
+	.grouped_elements img{
+		width: 10%;
+		margin: 0 45%;
+	} 
+	.content{
+		float: left;
+	}
+	.gridText{
+		width: 100%;
+	}
+	.textArea p{
+		font-size: 2vw;
+	}
+	.comentText .quotes:last-of-type{
+		margin-top:2%
+	}
+	
+	.galeryNav{
+		width: 80%;
+		margin: 2% 10%;
+	}
+	.galeriPic{
+		width: 50%;
+	}
+	.subFooterContent{
+		text-align: center;
+		
+	}
+	.subFooterContent ul{
+		
+	}
+	.subFooterContent ul li{
+		width: 100%;
+	}
+	.bottom{
+		font-size:2vw;
+	}
+	.descr{
+		width: 100%;
+	}
+	.titleBold h2{
+		font-size: 3vw;
+	}
