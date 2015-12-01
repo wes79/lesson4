@@ -276,7 +276,9 @@ header{
 	float:left;
 	
 }
-
+.btnMobile{
+	display: none;
+}
 .icons{
 	width:15%;
 	margin-left:45%;
@@ -696,7 +698,7 @@ header{
 	
 	#topElements{
 		position: inherit;
-		background-color: rgba(160, 134, 173, 0.6);
+		background-color: rgba(160, 134, 173, 0.8);
 	}
 	#overlayMask{
 		display: none;
@@ -775,3 +777,24 @@ header{
 	.titleBold h2{
 		font-size: 3vw;
 	}
+	.btn{
+		display: none;
+	}
+	.btnMobile{
+		display: block;
+		width: 50%;
+		margin: 0;
+		float: left;
+	}
+	.descr{
+		float: left;
+	}
+	.galeryNav{
+		float: none;
+	}
+	.galeryNav li{
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+}
