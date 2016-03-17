@@ -19,7 +19,13 @@ time, mark, audio, video {
 	width:100%;
 	
 }
-
+.clearfix:after {
+   content: " "; 
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
 
 @font-face {
    font-family: myFont;
@@ -31,6 +37,10 @@ time, mark, audio, video {
 	font-family:myFont;
 	font-stretch: expanded;
 	letter-spacing: 2px;
+	
+}
+#menuOpener{
+	display: none;
 }
 
 header{
@@ -77,7 +87,8 @@ header{
 }
 
 #container{
-	
+	float: left;
+
 	z-index:4;
 	
 }
@@ -91,7 +102,7 @@ header{
 	width:100%;
 
 }
-.top_menu{
+#top_menu{
 	width:50%;
 	float:left;
 	padding: 1.5% 0;
@@ -102,8 +113,10 @@ header{
 .menu{
     margin-left: 4%;
 	float: left;
+}
 
-	
+#sub:hover{
+	border: none;
 }
 .menu li{
 	width:17%;
@@ -121,21 +134,85 @@ header{
     font-family:myFont Arial;
     text-decoration: none;
     color: #ffffff;
-	text-transform: uppercase;
-	display:block;
-	
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.menuLink:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.menuLink:hover, .menuLink:focus, .menuLink:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+.menuLink:hover:before, .menuLink:focus:before, .menuLink:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }
 
-
-.menuLink:hover{
-	border-bottom: 2px #f8e1b4 solid;
-}
 .menuImg{
 	width:10%;
 	float:left;
 	margin-left: 5%;
 	margin-top: 2%;
 
+}
+
+.subMenu{
+	margin-top: 8%;
+	height: 0;
+	background-color: rgba(160,134,173,0.6);
+	border-radius: 0 0 10% 10%;
+	overflow: hidden;
+	float: left;
+}
+
+.subNav li{
+	width: 100%;
+	font-size: 1.2vw;
+	float: left;
+}
+.menu li:hover div{
+	height: auto;
+}
+.subNav li a{
+	font-family:myFont Arial;
+    text-decoration: none;
+    color: #ffffff;
+	text-transform: uppercase;
+	display:block;
+	float: left;
+}
+.subNav li a:hover{
+	border-bottom: 2px #f8e1b4 solid;
 }
 
 .grouped_elements{
@@ -148,14 +225,9 @@ header{
 	width:40%;
 
 }
-
 #overlayMask{
-
-	 background-color: rgba(160,134,173,0.6);
-	 width:100%;
-	 min-height:12vh;
-	 z-index: 1;
-	
+	background-color: rgba(160,134,173,0.6);
+	min-height: 9vh;
 }
 .fullContentText{
 	
@@ -210,7 +282,7 @@ header{
 	
 }
 .gridText{
-	width:30%;
+	width:31.3333%;
 	text-align:center;
 	font-family: myFont;
 	float:left;
@@ -254,8 +326,11 @@ header{
 	float: left;
 	margin:1%;
 }
+.equipName{
+	display: none;
+}
 .teamImg{
-	border-bottom: 2px #91c5a9 solid;
+	
 }
 
 .descr h4{
@@ -263,6 +338,7 @@ header{
 	padding-top:2%;
 	padding-bottom:2%;
 	border-bottom: 2px #91c5a9 solid;
+	border-top: 2px #91c5a9 solid;
 	font-family: myFont;
 }
 .descr p{
@@ -288,6 +364,7 @@ header{
 .FB{
 	background-color:#3b5998;
 	margin-left:1%;
+	
 }
 .FB:hover{
 	background-color:#3860b4;
@@ -519,9 +596,52 @@ header{
 	font-family: myFont;
     color: #7e63a8;
 }
-.galeryMenu:hover{
-	border-bottom: 2px #91c5a9 solid;
+
+.galeryMenu {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
 }
+.galeryMenu:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.galeryMenu:hover, .galeryMenu:focus, .galeryMenu:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+.galeryMenu:hover:before, .galeryMenu:focus:before, .galeryMenu:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+
 .pictures{
 	width: 100%;
 	float:left;
@@ -534,14 +654,57 @@ header{
 .galeriPic img{
 	display: block;
 }
-.pictureLink{
-	display: block;
-}
 
-.pictureLink:hover{
-	background-color: rgba(248,225,180,0.6);
-	opacity: 0.6;
-	z-index:3;
+.pictureLink{
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.pictureLink:hover, .pictureLink:focus, .pictureLink:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  z-index: 500;
+}
+.card-container {
+  cursor: pointer;
+  height: 350px;
+  perspective: 600;
+  position: relative;
+  width: 100%;
+}
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.card .back {
+  background: #eaeaed;
+  color: #0087cc;
+  line-height: 150px;
+  text-align: center;
+  transform: rotateY(180deg);
 }
 #footer{
 	clear: both;
@@ -661,7 +824,7 @@ header{
 	.menu li{
 		font-size: 1.4vw;
 	}
-	.top_menu{
+	#top_menu{
 		width: 65%;
 	}
 	.textArea h4{
@@ -685,13 +848,50 @@ header{
 	.halfMedia{
 		width:100%;
 	}
+	.titleBold{
+		margin: 0 5%;
+	}
 	.titleBold h2{
 		font-size: 3vw;
+		margin-top: 3%;
+	}
+	.contentText{
+		width: 90%;
+	}
+	
+	.tripleText{
+		width: 100%;
+	}
+	
+	.equipeContainer {
+		margin-left: 5%;
+		width: 94%;
+	}
+	.textImgFloat{
+		width: 90%;
+	}
+	.textArea button{
+		margin-top: 2%;
+	}
+	.galeryCont{
+		width: 90%;
+		margin: 0 5%;
+	}
+	.topFooterInfo{
+		width: 90%;
+		margin: 0 5%;
 	}
 }
 
-@media only screen  and (max-width : 640px) {
+@media only screen  and (max-width : 560px) {
 	
+	#menuOpener{
+		display: block;
+		width: 15%;
+		position: fixed;
+		top: 2%;
+		right: 2%;
+	}
 	.slick-slider{
 		display: none;
 	}
@@ -711,11 +911,18 @@ header{
 		width: 30%;
 		margin: 0 35%;
 	}
-	.top_menu{
+	#top_menu{
 		
 		width: 100%;
 		
 	}
+	.menuOpen{
+		display: none;
+	}
+	.menuClose{
+		display: block;
+	}
+	
 	.menuLink{
 		font-size: 4vw;
 	}
@@ -733,6 +940,16 @@ header{
 	.menuImg{
 		width: 80%;
 		margin: 2% 10%;
+	}
+	.subMenu{
+		height: auto;
+	}
+	.subNav li a{
+		font-size: 5vw;
+	}
+	.subNav li a:hover{
+		border: none;
+		color: #e8d2bb;
 	}
 	.grouped_elements img{
 		width: 10%;
@@ -771,9 +988,7 @@ header{
 	.bottom{
 		font-size:2vw;
 	}
-	.descr{
-		width: 100%;
-	}
+
 	.titleBold h2{
 		font-size: 3vw;
 	}
@@ -787,7 +1002,14 @@ header{
 		float: left;
 	}
 	.descr{
+		width: 100%;
 		float: left;
+	}
+	
+	.equipeContainer {
+		margin-left: 5%;
+		margin-right: 5%;
+		width: 90%;
 	}
 	.galeryNav{
 		float: none;

@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <title>lesson4</title>
 
-<link  type="text/css"href='css/main.css'  rel="stylesheet" />
+<link  type="text/css"href='css/main.css'  rel="stylesheet" >
+<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -14,8 +16,9 @@
 <meta http-equiv="cleartype" content="on">
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="js/responsiveslides.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="js/responsiveslides.js"></script>
+<script src="js/main.js"></script>
 
 <script>
   $(function() {
@@ -26,6 +29,7 @@
 <body>
 	<div id="wrapper">
 		<header class="header" role="banner">
+		
 		
 			<div class="slick-slider">
 			  <ul class="rslides">
@@ -38,10 +42,13 @@
 			<div id="topElements">
 				
 				<div id="container">
+					<div id="menuOpener">
+						<a id="menuOpenerA" href="#"><img src="img/mobile_opener_grey.png" alt=""/></a>
+					</div>
 					<div id="logo">
 						<img src="img/logo.png" />
 					</div>
-					<div class="top_menu">
+					<div id="top_menu" class="menuOpen">
 						<ul class="menu">
 							 <li>
 								<a class="menuLink " href="/">Home</a>
@@ -49,7 +56,26 @@
 							</li>
 							
 							<li>
-								 <a class="menuLink " href="/">PORTFOLIOS</a> 
+								 <a id="sub"class="menuLink " href="/">PORTFOLIOS</a> 
+								 <div class="subMenu clearfix">
+									<ul class="subNav">
+										<li>
+											<a class="" href="#">SHOW</a>
+										</li>
+										<li>
+											<a class="" href="#">ALL</a>
+										</li>									
+										<li>
+											<a class="" href="#">WEB</a>
+										</li>										
+										<li>
+											<a class="" href="#">PRINT</a>
+										</li>										
+										<li>
+											<a class="" href="#">BRANDING</a>
+										</li>
+									</ul>
+								 </div>
 							</li>
 							
 							
@@ -74,7 +100,7 @@
 							<a class="grouped_elements" href="#"><img src="img/right1.png" alt=""/></a>
 							<a class="grouped_elements" href="#"><img src="img/right2.png" alt=""/></a>
 							<a class="grouped_elements" href="#"><img src="img/right3.png" alt=""/></a>
-						</div>
+					</div>
 					<div id="overlayMask">
 					</div>
 				
@@ -120,7 +146,13 @@
 				<div class="equipeContainer">
 					<h3>Notre Equipe</h3>
 					<div class="descr">
-						<img class="teamImg"src="img/team1.png" alt=""/>
+						<div class="card-container">
+						  <div class="card">
+							<div class="side"><img class="teamImg"src="img/team1.png" alt=""/></div>
+							<div class="side back">Jimmy Eat World</div>
+						  </div>
+						</div>
+						
 						<h4>CRAIG GARNER CEO</h4>
 						<p>Amazone blessée du type de Sôsiklès. 
 						Copie romaine d'après un original grec Elle rassemble le peuple,
@@ -134,7 +166,13 @@
 						
 					</div>
 					<div class="descr">
-						<img class="teamImg"src="img/team2.png" alt=""/>
+						<div class="card-container">
+						  <div class="card">
+							<div class="side"><img class="teamImg"src="img/team2.png" alt=""/></div>
+							<div class="side back">Jimmy Eat World</div>
+						  </div>
+						</div>
+						
 						<h4>BRIDGE ROBERTS  CREATIVE GENIUS</h4>
 						<p>Amazone blessée du type de Sôsiklès.
 						Copie romaine d'après un original grec Elle rassemble le peuple</p>
@@ -146,7 +184,12 @@
 						</div>
 					</div>
 					<div class="descr">
-						<img class="teamImg"src="img/team3.png" alt=""/>
+						<div class="card-container">
+						  <div class="card">
+							<div class="side"><img class="teamImg"src="img/team3.png" alt=""/></div>
+							<div class="side back">Jimmy Eat World</div>
+						  </div>
+						</div>
 						<h4>MALADE GARNER CHEF DE PROJET</h4>
 						<p>Amazone blessée du type de Sôsiklès. 
 						Copie romaine d'après un original grec Elle rassemblele peuple</p>
